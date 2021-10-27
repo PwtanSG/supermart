@@ -7,7 +7,7 @@ class Connection
     public function __construct()
     {
         try {
-            $this->pdo = new PDO('mysql:server=localhost;dbname=spmart', 'root', '12345');
+            $this->pdo = new PDO('mysql:server=localhost;dbname=spmart', 'root', '');
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $exception) {
             echo "ERROR: " . $exception->getMessage();
