@@ -8,6 +8,7 @@ class Connection
     {
         try {
             $this->pdo = new PDO('mysql:server=localhost;dbname=spmart', 'root', '');
+            // $this->pdo = new PDO('mysql:host=bdd-db.coneblgqjgse.ap-southeast-1.rds.amazonaws.com;dbname=spmart', 'adminbdd', '123456');
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $exception) {
             echo "ERROR: " . $exception->getMessage();
